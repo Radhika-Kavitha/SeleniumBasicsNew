@@ -2,6 +2,8 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite name="Functional Suite">
 	<test name="Test">
+		<parameter name="browser" value="Chrome"/>
+		<parameter name="baseurl" value="https://demowebshop.tricentis.com/"/>
 		<classes>
 			<class name="org.selenium.commands.Commands">
 				<methods>

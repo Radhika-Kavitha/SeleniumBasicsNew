@@ -13,6 +13,7 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 import org.testng.ITestResult;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.Parameters;
 
 public class Base 
 {
@@ -38,14 +39,16 @@ public class Base
 		driver.manage().window().maximize();
 	}
 	
-	@BeforeMethod
-	public void setUp()
+	@BeforeMethod(alwaysRun = true)
+	@Parameters({"browser", "baseurl"})
+	public void setUp(String browsername, String url)
+	//public void setUp()
 	{
-		initializeBrowser("Chrome");
-		driver.get("https://demowebshop.tricentis.com/");
+		initializeBrowser(browsername);
+		driver.get(url);
 	}
 	
-	@AfterMethod
+	@AfterMethod(alwaysRun = true)
 	public void closeBrowser(ITestResult result) throws IOException
 	{
 		if(result.getStatus()==ITestResult.FAILURE)
@@ -61,6 +64,5 @@ public class Base
 		TakesScreenshot takesScreenShot = (TakesScreenshot) driver;
 		File screenShot = takesScreenShot.getScreenshotAs(OutputType.FILE);
 		FileUtils.copyFile(screenShot, new File("./ScreenShots/"+result.getName()+".png"));
-		
 	}
 }

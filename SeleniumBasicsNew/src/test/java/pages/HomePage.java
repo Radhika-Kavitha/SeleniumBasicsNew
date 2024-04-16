@@ -4,6 +4,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
+import org.selenium.utilities.WebElementUtility;
 
 public class HomePage 
 {
@@ -13,9 +14,18 @@ public class HomePage
 			this.driver=driver;		
 			PageFactory.initElements(driver, this); 
 		}
-	@FindBy(xpath = "//input[@id='vote-poll-1']")WebElement vote;
-    @FindBy(partialLinkText = "REGISTER")WebElement register;
-	@FindBy(xpath = "/html/body/div[4]/div[1]/div[1]/div[2]/div[1]/ul/li[2]/a")WebElement login;
-	@FindBy(xpath = "//label[starts-with(@for,'pollanswe')]//parent::li")WebElement pool;
-	@FindBy(xpath = "//input[@id='newsletter-subscribe-button']")WebElement subscribe;
+	@FindBy(xpath= "//a[text()='Log in']") 
+	WebElement loginLink;
+	@FindBy(xpath= "//a[text()='Register']") 
+	WebElement registerLink;
+	public LoginPage clickOnLoginMenu()
+	{
+		WebElementUtility.clickOnElement(loginLink);
+		return new LoginPage(driver);
+	}
+	public RegistrationPage clickOnRegisterMenu()
+	{
+		WebElementUtility.clickOnElement(registerLink);
+		return new RegistrationPage(driver);
+	}
 }
