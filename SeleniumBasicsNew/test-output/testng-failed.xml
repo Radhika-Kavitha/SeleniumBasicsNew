@@ -1,16 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
 <suite name="Failed suite [Functional Suite]" guice-stage="DEVELOPMENT">
-  <test thread-count="5" name="Smoke Test(failed)">
+  <listeners>
+    <listener class-name="listeners.AnnotationTransformer"/>
+  </listeners>
+  <test thread-count="5" name="Regression Test(failed)">
+    <parameter name="baseurl" value="https://demowebshop.tricentis.com/"/>
     <parameter name="browser" value="Chrome"/>
     <classes>
-      <class name="test.RegistrationPageTest">
+      <class name="test.LoginPageTest">
         <methods>
-          <include name="verifyUserRegister"/>
           <include name="closeBrowser"/>
+          <include name="verifyLoginPageTitle"/>
           <include name="setUp"/>
         </methods>
-      </class> <!-- test.RegistrationPageTest -->
+      </class> <!-- test.LoginPageTest -->
     </classes>
-  </test> <!-- Smoke Test(failed) -->
+  </test> <!-- Regression Test(failed) -->
 </suite> <!-- Failed suite [Functional Suite] -->

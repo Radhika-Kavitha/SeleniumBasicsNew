@@ -12,14 +12,15 @@ import org.testng.Assert;
 import org.testng.annotations.Test;
 
 import automationCore.Base;
+import listeners.RetryAnalyzer;
 
 public class HomePageTest extends Base
  {
-	@Test(priority=1,groups= {"Regression","Smoke"})
+	@Test(priority=1,groups= {"Regression","Smoke"}, retryAnalyzer = RetryAnalyzer.class)
   	public void verifyHomePageTitle() throws IOException 
 		{
 			String actualTitle = driver.getTitle();
-			String data = ExcelUtility.stringDataRead(0, 0, Constants.HOME_PAGE_DATA);
+			String data = ExcelUtility.stringDataRead(0, 0, Constants.HOME_PAGE_DATA)+"123";
 			Assert.assertEquals(actualTitle, data, Messages.TITLE_MESSAGES);
 		}
 	
@@ -37,9 +38,7 @@ public class HomePageTest extends Base
 							communityPoll.get(i).click();
 							String actualPoll = pollOptionsText;
 							Assert.assertEquals(actualPoll, data, Messages.OPTION_MESSAGES);
-							
 						}
 				}
-			
 		}
  }

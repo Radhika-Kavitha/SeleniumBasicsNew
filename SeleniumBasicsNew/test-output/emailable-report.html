@@ -9,14 +9,16 @@
 <table>
 <tr><th>Test</th><th># Passed</th><th># Skipped</th><th># Retried</th><th># Failed</th><th>Time (ms)</th><th>Included Groups</th><th>Excluded Groups</th></tr>
 <tr><th colspan="8">Functional Suite</th></tr>
-<tr><td><a href="#t0">Regression Test</a></td><td class="num">1</td><td class="num">0</td><td class="num">0</td><td class="num">0</td><td class="num">23,181</td><td></td><td></td></tr>
-<tr class="stripe"><td><a href="#t1">Smoke Test</a></td><td class="num">1</td><td class="num">0</td><td class="num">0</td><td class="num">0</td><td class="num">16,006</td><td></td><td></td></tr>
-<tr><th>Total</th><th class="num">2</th><th class="num">0</th><th class="num">0</th><th class="num">0</th><th class="num">39,187</th><th colspan="2"></th></tr>
+<tr><td><a href="#t0">Regression Test</a></td><td class="num">3</td><td class="num">0</td><td class="num">0</td><td class="num attn">1</td><td class="num">58,069</td><td></td><td></td></tr>
 </table>
-<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">Functional Suite</th></tr></tbody><tbody id="t0"><tr><th colspan="4">Regression Test &#8212; passed</th></tr><tr class="passedeven"><td rowspan="1">test.RegistrationPageTest</td><td><a href="#m0">verifyUserRegister</a></td><td rowspan="1">1713243997720</td><td rowspan="1">3691</td></tr></tbody>
-<tbody id="t1"><tr><th colspan="4">Smoke Test &#8212; passed</th></tr><tr class="passedeven"><td rowspan="1">test.RegistrationPageTest</td><td><a href="#m1">verifyUserRegister</a></td><td rowspan="1">1713244013755</td><td rowspan="1">4264</td></tr></tbody>
+<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">Functional Suite</th></tr></tbody><tbody id="t0"><tr><th colspan="4">Regression Test &#8212; failed</th></tr><tr class="failedeven"><td rowspan="1">test.LoginPageTest</td><td><a href="#m0">verifyLoginPageTitle</a></td><td rowspan="1">1713429940554</td><td rowspan="1">5664</td></tr><tr><th colspan="4">Regression Test &#8212; passed</th></tr><tr class="passedeven"><td rowspan="3">test.LoginPageTest</td><td><a href="#m1">verifyUserLoginWithInvalidCredentials</a></td><td rowspan="3">1713429970948</td><td rowspan="3">3230</td></tr><tr class="passedeven"><td><a href="#m2">verifyUserLoginWithInvalidCredentials</a></td></tr><tr class="passedeven"><td><a href="#m3">verifyUserLoginWithInvalidCredentials</a></td></tr></tbody>
 </table>
-<h2>Regression Test</h2><h3 id="m0">test.RegistrationPageTest#verifyUserRegister</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h2>Smoke Test</h2><h3 id="m1">test.RegistrationPageTest#verifyUserRegister</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h2>Regression Test</h2><h3 id="m0">test.LoginPageTest#verifyLoginPageTitle</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.AssertionError: Title is invalid expected [Demo Web Shop. Login123] but found [Demo Web Shop. Login]
+	at test.LoginPageTest.verifyLoginPageTitle(LoginPageTest.java:32)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+... Removed 32 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m1">test.LoginPageTest#verifyUserLoginWithInvalidCredentials</h3><table class="result"><tr class="param"><th>Parameter #1</th><th>Parameter #2</th></tr><tr class="param stripe"><td>shangeeotom786@gmail.com</td><td>EASTER%egg4</td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m2">test.LoginPageTest#verifyUserLoginWithInvalidCredentials</h3><table class="result"><tr class="param"><th>Parameter #1</th><th>Parameter #2</th></tr><tr class="param stripe"><td>shangeotom786@gmail.com</td><td>EASTERe%egg4</td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m3">test.LoginPageTest#verifyUserLoginWithInvalidCredentials</h3><table class="result"><tr class="param"><th>Parameter #1</th><th>Parameter #2</th></tr><tr class="param stripe"><td>shandgeotom786@gmail.com</td><td>EASTdER%egg4</td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
 </body>
 </html>

@@ -19,7 +19,7 @@ import pages.UserAccountPage;
 
 public class LoginPageTest extends Base
 {
-  @Test(priority=5,groups="Smoke")
+  @Test(priority=5,groups="Sanity")
   public void verifyLoginPageTitle() throws IOException 
   {
 	  //WebElement loginLink = driver.findElement(By.xpath("//a[text()='Log in']"));
@@ -28,7 +28,7 @@ public class LoginPageTest extends Base
 	  LoginPage login = home.clickOnLoginMenu();
 	  String actualTitle = driver.getTitle();
 	  //System.out.println(actualTitle);//Demo Web Shop. Login
-	  String data = ExcelUtility.stringDataRead(0, 0, Constants.LOGIN_PAGE_DATA);
+	  String data = ExcelUtility.stringDataRead(0, 0, Constants.LOGIN_PAGE_DATA)+"123";
 	  Assert.assertEquals(actualTitle, data, Messages.TITLE_MESSAGES);
   }
   

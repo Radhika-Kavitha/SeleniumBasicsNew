@@ -26,7 +26,7 @@
       <span class="top-banner-title-font">Test results</span>
       <button id="button" class="button">Switch Retro Theme</button> <!-- button -->
       <br/>
-      <span class="top-banner-font-1">1 suite</span>
+      <span class="top-banner-font-1">1 suite, 1 failed test</span>
     </div> <!-- top-banner-root -->
     <div class="navigator-root">
       <div class="navigator-suite-header">
@@ -40,7 +40,7 @@
         <div class="rounded-window">
           <div class="suite-header light-rounded-window-top">
             <a href="#" panel-name="suite-Functional_Suite" class="navigator-link">
-              <span class="suite-name border-passed">Functional Suite</span>
+              <span class="suite-name border-failed">Functional Suite</span>
             </a> <!-- navigator-link -->
           </div> <!-- suite-header light-rounded-window-top -->
           <div class="navigator-suite-content">
@@ -51,12 +51,12 @@
               <ul>
                 <li>
                   <a href="#" panel-name="test-xml-Functional_Suite" class="navigator-link ">
-                    <span>C:\Users\91756\git\SeleniumBasicsNew\SeleniumBasicsNew\mytestngclasslevel.xml</span>
+                    <span>C:\Users\91756\git\SeleniumBasicsNew2\SeleniumBasicsNew\retry_testng.xml</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
                   <a href="#" panel-name="testlist-Functional_Suite" class="navigator-link ">
-                    <span class="test-stats">2 tests</span>
+                    <span class="test-stats">1 test</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
@@ -93,7 +93,21 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">2 methods,   2 passed</span>
+                    <span class="method-stats">4 methods, 1 failed,   3 passed</span>
+                  </li>
+                  <li>
+                    <span class="method-list-title failed">Failed methods</span>
+                    <span class="show-or-hide-methods failed">
+                      <a href="#" panel-name="suite-Functional_Suite" class="hide-methods failed suite-Functional_Suite"> (hide)</a> <!-- hide-methods failed suite-Functional_Suite -->
+                      <a href="#" panel-name="suite-Functional_Suite" class="show-methods failed suite-Functional_Suite"> (show)</a> <!-- show-methods failed suite-Functional_Suite -->
+                    </span>
+                    <div class="method-list-content failed suite-Functional_Suite">
+                      <span>
+                        <img src="failed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Functional_Suite" title="test.LoginPageTest" class="method navigator-link" hash-for-method="verifyLoginPageTitle">verifyLoginPageTitle</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                    </div> <!-- method-list-content failed suite-Functional_Suite -->
                   </li>
                   <li>
                     <span class="method-list-title passed">Passed methods</span>
@@ -104,12 +118,17 @@
                     <div class="method-list-content passed suite-Functional_Suite">
                       <span>
                         <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Functional_Suite" title="test.RegistrationPageTest" class="method navigator-link" hash-for-method="verifyUserRegister">verifyUserRegister</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-Functional_Suite" title="test.LoginPageTest" class="method navigator-link" hash-for-method="verifyUserLoginWithInvalidCredentials(shangeeotom786@gmail.com, EASTER%egg4)">verifyUserLoginWithInvalidCredentials(shangeeotom786@gmail.com, EASTER%egg4)</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
                         <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Functional_Suite" title="test.RegistrationPageTest" class="method navigator-link" hash-for-method="verifyUserRegister">verifyUserRegister</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-Functional_Suite" title="test.LoginPageTest" class="method navigator-link" hash-for-method="verifyUserLoginWithInvalidCredentials(shangeotom786@gmail.com, EASTERe%egg4)">verifyUserLoginWithInvalidCredentials(shangeotom786@gmail.com, EASTERe%egg4)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Functional_Suite" title="test.LoginPageTest" class="method navigator-link" hash-for-method="verifyUserLoginWithInvalidCredentials(shandgeotom786@gmail.com, EASTdER%egg4)">verifyUserLoginWithInvalidCredentials(shandgeotom786@gmail.com, EASTdER%egg4)</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content passed suite-Functional_Suite -->
@@ -124,24 +143,54 @@
     <div class="wrapper">
       <div class="main-panel-root">
         <div panel-name="suite-Functional_Suite" class="panel Functional_Suite">
-          <div class="suite-Functional_Suite-class-passed">
+          <div class="suite-Functional_Suite-class-failed">
             <div class="main-panel-header rounded-window-top">
-              <img src="passed.png"/>
-              <span class="class-name">test.RegistrationPageTest</span>
+              <img src="failed.png"/>
+              <span class="class-name">test.LoginPageTest</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="verifyUserRegister">
-                  </a> <!-- verifyUserRegister -->
-                  <span class="method-name">verifyUserRegister</span>
+                  <a name="verifyLoginPageTitle">
+                  </a> <!-- verifyLoginPageTitle -->
+                  <span class="method-name">verifyLoginPageTitle</span>
+                  <div class="stack-trace">java.lang.AssertionError: Title is invalid expected [Demo Web Shop. Login123] but found [Demo Web Shop. Login]
+	at test.LoginPageTest.verifyLoginPageTitle(LoginPageTest.java:32)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+... Removed 32 stack frames
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Functional_Suite-class-failed -->
+          <div class="suite-Functional_Suite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">test.LoginPageTest</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="verifyUserLoginWithInvalidCredentials(shangeeotom786@gmail.com, EASTER%egg4)">
+                  </a> <!-- verifyUserLoginWithInvalidCredentials(shangeeotom786@gmail.com, EASTER%egg4) -->
+                  <span class="method-name">verifyUserLoginWithInvalidCredentials</span>
+                  <span class="parameters">(shangeeotom786@gmail.com, EASTER%egg4)</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
               <div class="method">
                 <div class="method-content">
-                  <a name="verifyUserRegister">
-                  </a> <!-- verifyUserRegister -->
-                  <span class="method-name">verifyUserRegister</span>
+                  <a name="verifyUserLoginWithInvalidCredentials(shangeotom786@gmail.com, EASTERe%egg4)">
+                  </a> <!-- verifyUserLoginWithInvalidCredentials(shangeotom786@gmail.com, EASTERe%egg4) -->
+                  <span class="method-name">verifyUserLoginWithInvalidCredentials</span>
+                  <span class="parameters">(shangeotom786@gmail.com, EASTERe%egg4)</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="verifyUserLoginWithInvalidCredentials(shandgeotom786@gmail.com, EASTdER%egg4)">
+                  </a> <!-- verifyUserLoginWithInvalidCredentials(shandgeotom786@gmail.com, EASTdER%egg4) -->
+                  <span class="method-name">verifyUserLoginWithInvalidCredentials</span>
+                  <span class="parameters">(shandgeotom786@gmail.com, EASTdER%egg4)</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
@@ -149,27 +198,23 @@
         </div> <!-- panel Functional_Suite -->
         <div panel-name="test-xml-Functional_Suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">C:\Users\91756\git\SeleniumBasicsNew\SeleniumBasicsNew\mytestngclasslevel.xml</span>
+            <span class="header-content">C:\Users\91756\git\SeleniumBasicsNew2\SeleniumBasicsNew\retry_testng.xml</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <pre>
 &lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
 &lt;!DOCTYPE suite SYSTEM &quot;https://testng.org/testng-1.0.dtd&quot;&gt;
 &lt;suite name=&quot;Functional Suite&quot; guice-stage=&quot;DEVELOPMENT&quot;&gt;
+  &lt;listeners&gt;
+    &lt;listener class-name=&quot;listeners.AnnotationTransformer&quot;/&gt;
+  &lt;/listeners&gt;
   &lt;test thread-count=&quot;5&quot; name=&quot;Regression Test&quot;&gt;
     &lt;parameter name=&quot;baseurl&quot; value=&quot;https://demowebshop.tricentis.com/&quot;/&gt;
     &lt;parameter name=&quot;browser&quot; value=&quot;Chrome&quot;/&gt;
     &lt;classes&gt;
-      &lt;class name=&quot;test.RegistrationPageTest&quot;/&gt;
+      &lt;class name=&quot;test.LoginPageTest&quot;/&gt;
     &lt;/classes&gt;
   &lt;/test&gt; &lt;!-- Regression Test --&gt;
-  &lt;test thread-count=&quot;5&quot; name=&quot;Smoke Test&quot;&gt;
-    &lt;parameter name=&quot;baseurl&quot; value=&quot;https://demowebshop.tricentis.com/&quot;/&gt;
-    &lt;parameter name=&quot;browser&quot; value=&quot;Chrome&quot;/&gt;
-    &lt;classes&gt;
-      &lt;class name=&quot;test.RegistrationPageTest&quot;/&gt;
-    &lt;/classes&gt;
-  &lt;/test&gt; &lt;!-- Smoke Test --&gt;
 &lt;/suite&gt; &lt;!-- Functional Suite --&gt;
             </pre>
           </div> <!-- main-panel-content rounded-window-bottom -->
@@ -183,9 +228,6 @@
               <li>
                 <span class="test-name">Regression Test (1 class)</span>
               </li>
-              <li>
-                <span class="test-name">Smoke Test (1 class)</span>
-              </li>
             </ul>
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
@@ -195,10 +237,14 @@
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="test-group">
-              <span class="test-group-name">Regression</span>
+              <span class="test-group-name">Sanity</span>
               <br/>
               <div class="method-in-group">
-                <span class="method-in-group-name">verifyUserRegister</span>
+                <span class="method-in-group-name">verifyLoginPageTitle</span>
+                <br/>
+              </div> <!-- method-in-group -->
+              <div class="method-in-group">
+                <span class="method-in-group-name">verifyUserLoginWithInvalidCredentials</span>
                 <br/>
               </div> <!-- method-in-group -->
             </div> <!-- test-group -->
@@ -218,20 +264,28 @@ data.addColumn('number', 'Number');
 data.addColumn('string', 'Method');
 data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
-data.addRows(2);
+data.addRows(4);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'verifyUserRegister')
-data.setCell(0, 2, 'test.RegistrationPageTest')
-data.setCell(0, 3, 4264);
+data.setCell(0, 1, 'verifyLoginPageTitle')
+data.setCell(0, 2, 'test.LoginPageTest')
+data.setCell(0, 3, 5664);
 data.setCell(1, 0, 1)
-data.setCell(1, 1, 'verifyUserRegister')
-data.setCell(1, 2, 'test.RegistrationPageTest')
-data.setCell(1, 3, 3691);
+data.setCell(1, 1, 'verifyUserLoginWithInvalidCredentials')
+data.setCell(1, 2, 'test.LoginPageTest')
+data.setCell(1, 3, 3230);
+data.setCell(2, 0, 2)
+data.setCell(2, 1, 'verifyUserLoginWithInvalidCredentials')
+data.setCell(2, 2, 'test.LoginPageTest')
+data.setCell(2, 3, 2539);
+data.setCell(3, 0, 3)
+data.setCell(3, 1, 'verifyUserLoginWithInvalidCredentials')
+data.setCell(3, 2, 'test.LoginPageTest')
+data.setCell(3, 3, 1968);
 window.suiteTableData['Functional_Suite']= { tableData: data, tableDiv: 'times-div-Functional_Suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 7 seconds</span>
+              <span class="suite-total-time">Total running time: 13 seconds</span>
               <div id="times-div-Functional_Suite">
               </div> <!-- times-div-Functional_Suite -->
             </div> <!-- times-div -->
@@ -246,15 +300,13 @@ return data;
         </div> <!-- panel -->
         <div panel-name="ignored-methods-Functional_Suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">2 ignored methods</span>
+            <span class="header-content">1 ignored method</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="ignored-class-div">
-              <span class="ignored-class-name">test.RegistrationPageTest</span>
+              <span class="ignored-class-name">test.LoginPageTest</span>
               <div class="ignored-methods-div">
-                <span class="ignored-method-name">verifyRegisterPageTitle</span>
-                <br/>
-                <span class="ignored-method-name">verifyRegisterPageTitle</span>
+                <span class="ignored-method-name">verifyUserLogin</span>
                 <br/>
               </div> <!-- ignored-methods-div -->
             </div> <!-- ignored-class-div -->
@@ -266,30 +318,56 @@ return data;
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="chronological-class">
-              <div class="chronological-class-name">test.RegistrationPageTest</div> <!-- chronological-class-name -->
+              <div class="chronological-class-name">test.LoginPageTest</div> <!-- chronological-class-name -->
               <div class="configuration-method before">
                 <span class="method-name">setUp(Chrome, https://demowebshop.tricentis.com/)</span>
                 <span class="method-start">0 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
-                <span class="method-name">verifyUserRegister</span>
-                <span class="method-start">18841 ms</span>
+                <img src="failed.png">
+                </img>
+                <span class="method-name">verifyLoginPageTitle</span>
+                <span class="method-start">13647 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
-                <span class="method-name">closeBrowser([TestResult name=verifyUserRegister status=SUCCESS method=RegistrationPageTest.verifyUserRegister()[...)</span>
-                <span class="method-start">22533 ms</span>
+                <span class="method-name">closeBrowser([TestResult name=verifyLoginPageTitle status=FAILURE method=LoginPageTest.verifyLoginPageTitle()[pri...)</span>
+                <span class="method-start">19321 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-method before">
                 <span class="method-name">setUp(Chrome, https://demowebshop.tricentis.com/)</span>
-                <span class="method-start">23252 ms</span>
+                <span class="method-start">20021 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
-                <span class="method-name">verifyUserRegister</span>
-                <span class="method-start">34876 ms</span>
+                <span class="method-name">verifyUserLoginWithInvalidCredentials(shandgeotom786@gmail.com, EASTdER%egg4)</span>
+                <span class="method-start">31775 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
-                <span class="method-name">closeBrowser([TestResult name=verifyUserRegister status=SUCCESS method=RegistrationPageTest.verifyUserRegister()[...)</span>
-                <span class="method-start">39141 ms</span>
+                <span class="method-name">closeBrowser([TestResult name=verifyUserLoginWithInvalidCredentials status=SUCCESS method=LoginPageTest.verifyUse...)</span>
+                <span class="method-start">34317 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">setUp(Chrome, https://demowebshop.tricentis.com/)</span>
+                <span class="method-start">34694 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">verifyUserLoginWithInvalidCredentials(shangeeotom786@gmail.com, EASTER%egg4)</span>
+                <span class="method-start">44041 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">closeBrowser([TestResult name=verifyUserLoginWithInvalidCredentials status=SUCCESS method=LoginPageTest.verifyUse...)</span>
+                <span class="method-start">47271 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">setUp(Chrome, https://demowebshop.tricentis.com/)</span>
+                <span class="method-start">47514 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">verifyUserLoginWithInvalidCredentials(shangeotom786@gmail.com, EASTERe%egg4)</span>
+                <span class="method-start">55737 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">closeBrowser([TestResult name=verifyUserLoginWithInvalidCredentials status=SUCCESS method=LoginPageTest.verifyUse...)</span>
+                <span class="method-start">57706 ms</span>
               </div> <!-- configuration-method after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
